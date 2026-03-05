@@ -29,6 +29,7 @@ This tool allows you to convert complex skeletal animations into high-performanc
 5.  (Optional) Select specific animations in the `Animation Selection` group.
 6.  Configure your output settings (Mesh, MultiMesh, or External Textures).
 7.  Click the **Create** button at the top of the inspector.
+8.  A static mesh and vertex animation player will be created, which you can use in your project.
 
 > [!IMPORTANT]
 > **Technical Limitations:**

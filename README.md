@@ -1,4 +1,7 @@
-# Godot Vertex Animation Plugin
+<h1>
+  <img src="addons/vertex_animation_plugin/icons/vertex_animation_editor_icon.svg" width="40" valign="middle">
+  Godot Vertex Animation Plugin
+</h1>
 
 **Godot Engine addon that enables creating vertex animations from skeletal animations.**
 

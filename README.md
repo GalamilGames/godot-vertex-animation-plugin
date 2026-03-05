@@ -29,7 +29,25 @@ This tool allows you to convert complex skeletal animations into high-performanc
 5.  (Optional) Select specific animations in the `Animation Selection` group.
 6.  Configure your output settings (Mesh, MultiMesh, or External Textures).
 7.  Click the **Create** button at the top of the inspector.
-8.  A static mesh and vertex animation player will be created, which you can use in your project.
+8.  Static mesh and **VertexAnimationPlayer** node will be created, which you can use in your project.
+9.  Use `func play(animation_index: int):` for **VertexAnimationMeshPlayer** or `func play(animation_index: int, instance: int):` for **VertexAnimationMultiMeshPlayer**.
+10. (Optional) You can test vertex animations in the editor.
+
+<table border="0">
+  <tr>
+    <td rowspan="2">
+      <img src="images/screenshots/vae_screen_1.png" width="500">
+    </td>
+    <td>
+      <img src="images/screenshots/vae_screen_2.png" width="500">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="images/screenshots/vae_screen_3.png" width="500">
+    </td>
+  </tr>
+</table>
 
 > [!IMPORTANT]
 > **Technical Limitations:**

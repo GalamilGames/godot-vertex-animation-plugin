@@ -16,7 +16,7 @@ extends Node
 @export_group("Animation Selection")
 @export var _select_all := true:
 	set(value): _select_all = value; _update_animation_list(_select_all)
-@export var _animations: Dictionary[String, bool]
+@export var _animations: Dictionary[String, bool] = {}
 
 @export_group("Create Mesh")
 @export_custom(PROPERTY_HINT_GROUP_ENABLE, "") var _create_mesh = true
@@ -209,11 +209,13 @@ func update_resource_filesystem(save_paths: PackedStringArray) -> void:
 
 #region Editor
 func _update_animation_list(select := true) -> void:
-	_animations.clear()
+	# We prevent the dictionary from being cleared during scene loading.
+	if not is_inside_tree():
+		return
+	_animations = {}
 	for animation in _animation_player.get_animation_list():
 		_animations.set(animation, select)
 	notify_property_list_changed()
-
 
 func _create_popup_window() -> Window:
 	var label := Label.new()

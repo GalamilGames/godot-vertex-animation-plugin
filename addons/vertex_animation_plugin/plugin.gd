@@ -27,6 +27,8 @@ func _on_selection_changed():
 	var selected_node: Node
 	if not selection.is_empty():
 		selected_node = selection[0]
+	if selected_node == null:
+		return
 	if selected_node is VertexAnimationMeshPlayer or selected_node is VertexAnimationMultiMeshPlayer:
 		make_bottom_panel_item_visible(_animation_editor_player_panel)
 	_animation_editor_player_panel.initialize(selected_node)
